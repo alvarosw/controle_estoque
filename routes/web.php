@@ -17,3 +17,15 @@ Route::group(['prefix'=>'fornecedores'], function() {
 
     Route::put('{id}/update', 'FornecedorController@update');
 });
+
+Route::group(['prefix'=>'clientes'], function() {
+    Route::get('', 'ClienteController@index');
+    
+    Route::get('create', 'ClienteController@create');
+
+    Route::post('store', 'ClienteController@store');
+
+    Route::get('{id}/edit', 'ClienteController@edit');
+
+    Route::put('{id}/update', 'ClienteController@update');
+});
