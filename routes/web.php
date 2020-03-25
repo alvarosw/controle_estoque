@@ -6,8 +6,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/fornecedores', 'FornecedorController@index');
+Route::group(['prefix'=>'fornecedores'], function() {
+    Route::get('', 'FornecedorController@index');
+    
+    Route::get('create', 'FornecedorController@create');
 
-Route::get('/fornecedores/create', 'FornecedorController@create');
+    Route::post('store', 'FornecedorController@store');
 
-Route::post('/fornecedores/store', 'FornecedorController@store');
+    Route::get('{id}/edit', 'FornecedorController@edit');
+
+    Route::put('{id}/update', 'FornecedorController@update');
+});
