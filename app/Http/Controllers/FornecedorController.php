@@ -27,4 +27,17 @@ class FornecedorController extends Controller
         return redirect('fornecedores');
     }
 
+    public function edit($id)
+    {
+        $fornecedor = Fornecedor::find($id);
+        return view('fornecedores.edit', compact('fornecedor'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $fornecedor = Fornecedor::find($id);
+        $fornecedor->update($request->all());
+        
+        return redirect('fornecedores');
+    }
 }

@@ -7,20 +7,21 @@
     <title>Clientes</title>
 </head>
 <body>
-    <h2>Cadastrar Cliente</h2>
+    <h2>Editar Cliente</h2>
 
-    <form action="/clientes/store" method="POST">
+    <form action="/clientes/{{$cliente->id}}/update" method="POST">
         @csrf
-        <label>Nome:</label><input type="text" name="nome">
+        <label>Nome:</label>
+        <input type="text" name="nome" value="{{ $cliente->nome }}">
         <br><br>
         <label>Endereço:</label>
-        <input type="text" name="endereco">
+        <input type="text" name="endereco" value="{{ $cliente->endereco }}">
         <br><br>
         <label>Telefone:</label>
-        <input type="text" name="contato">
+    <input type="text" name="contato" value="{{ $cliente->contato }}">
         <br><br>
         <input type="submit">
+        @method('PUT')
     </form>
-
 </body>
 </html>
