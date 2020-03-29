@@ -8,26 +8,6 @@ use App\Http\Requests\ClienteRequests;
 
 class ClienteController extends Controller
 {
-<<<<<<< HEAD
-  
-    public function cadastrar(){
-        
-    }       
-
-    public function editar(){
-        $clientes = Cliente::all();
-    }
-
-    public function ler(){
-        $clientes = Cliente::all();
-    }
-
-
-
-
-
-=======
-    
     public function index()
     {
         $res = Cliente::all();
@@ -59,5 +39,4 @@ class ClienteController extends Controller
         
         return redirect('clientes');
     }
->>>>>>> f8cdba0359f0ff594225d69d1482af880a5ce994
 }
