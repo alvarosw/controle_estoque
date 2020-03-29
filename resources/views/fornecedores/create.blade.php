@@ -14,7 +14,7 @@
         <input type="text" placeholder="Nome" name="nome">
 
         <label for="status">Status:</label>
-        <select name="ativo">
+        <select name="status">
             <option value="1">Ativo</option>
             <option value="0">Inativo</option>
         </select>

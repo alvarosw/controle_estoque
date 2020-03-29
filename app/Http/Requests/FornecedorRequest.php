@@ -16,7 +16,7 @@ class FornecedorRequest extends FormRequest
     {
         return [
             'nome'=> 'required',
-            'ativo'=> 'required'
+            'status'=> 'required'
         ];
     }
 }

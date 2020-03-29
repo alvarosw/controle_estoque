@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fornecedores</title>
+    <title>Categorias</title>
 </head>
 <body>
-    <h2>Editar Fornecedor</h2>
+    <h2>Cadastrar Categoria</h2>
 
-    <form action="/fornecedores/{{$fornecedor->id}}/update" method="POST">
+    <form action="/categorias/store" method="POST">
         @csrf
-        <input type="text" placeholder="Nome" name="nome" value="{{ $fornecedor->nome }}">
+        <input type="text" placeholder="Nome" name="nome">
 
         <label for="status">Status:</label>
         <select name="status">
@@ -20,7 +20,6 @@
         </select>
         <br><br>
         <input type="submit">
-        @method('PUT')
     </form>
 </body>
 </html>
